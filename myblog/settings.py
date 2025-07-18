@@ -53,9 +53,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'myblog.urls'
-TEMPLATES_DIR = os.path.join(os.path.dirname(BASE_DIR), 'myblog/templates')
-TEMPLATES_BLOG_DIR = os.path.join(os.path.dirname(BASE_DIR), 'myblog/templates/blog')
-TEMPLATES_AUTH_DIR = os.path.join(os.path.dirname(BASE_DIR), 'myblog/templates/auth')
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+TEMPLATES_BLOG_DIR = os.path.join(BASE_DIR, 'templates/blog')
+TEMPLATES_AUTH_DIR =os.path.join(BASE_DIR, 'templates/auth')
 
 TEMPLATES = [
     {
@@ -121,10 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),'static')),
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static')),
 
 MEDIA = 'media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'media')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
