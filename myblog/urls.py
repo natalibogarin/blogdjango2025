@@ -21,5 +21,6 @@ from blogapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('posts', views.posts, name='posts')
+    path('posts', views.posts, name='posts'),
+    path('post-detalle/<int:id>', views.postdetalle, name='postdetalle')
 ]
